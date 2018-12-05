@@ -1,0 +1,16 @@
+یۆنجه‌
+Latin: 	 - Medicago sativa
+English: 	 - Alfalfa
+
+یه‌وه‌نجه‌، یۆنجێ، یه‌ونجێ، هسبست و ده ستاروك گیایەکی چەند ساڵەیە لە بنەماڵەی Leguminoseae کە باڵای تاکوو ١ میتر بەرز دەبێ و گەڵاکانی لە سێ گەڵاچکەیتر پێک دەین کە نووکیان تیژە و رەنگیان سەوز و شێوازیان هێلکەییە. گوڵی یۆنجە مەیلەو سەوز و رەنگی بەنەوشەی تاریک و یان شینێکی رووناکە. بەرەکەی لە سەدەف دەچێ کە دانەی گیاکەی تێدایە و دەڵێ لووبیایە بەڵام ئەم زۆر زۆر چووکەترە.
+یۆنجە لە دابەش کردنی رەگەز و تیرە و بنماڵەدا بەم جۆرە دابەش کراوە:
+Kingdom: Plantae
+Division: Magnoliophyta
+Class: Magnoliopsida
+Order: Fabales
+Family: Fabaceae
+Subfamily: Faboideae
+Tribe: Trifolieae
+Genus: Medicago
+Species: M. sativa
+سه‌یری وێنجه‌ بکه‌.
