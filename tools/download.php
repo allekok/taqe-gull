@@ -13,7 +13,7 @@ function get_letters() {
     foreach($dom->getElementsByTagName("a") as $a) {
         $href = $a->getAttribute("href");
         if(in_array($href, $GLOBALS["NOT"])) continue;
-    
+	
         $letters[] = [
             "url" => $href,
             "letter" => urldecode(substr($href, strrpos($href, "/")+1)),
@@ -106,7 +106,7 @@ foreach($letters as $one) {
                 }
             }
         }
-                    
+        
         
         $res_imgs = [];
         foreach($imgs as $img) {
