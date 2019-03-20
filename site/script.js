@@ -30,13 +30,16 @@ function echo_list(list, target_ID) {
     if (back !== "") {
         html += `<a style='text-align:left;background:rgba(255,255,255,.15);' href='#${back}' onclick='event.preventDefault();get_list("${back}", "main");'>گەڕانەوە &rsaquo;</a>`;
     }
-
+    
     for (var i in list) {
         href = get_path() + "/" + list[i];
         lnk = gLQ = href.split("/").length < 5 ? `#${href}` : `${href}`;
         gLQ = href.split("/").length < 5 ? `event.preventDefault();get_list("${href}", "main");` : "";
 
         html += `<a href='${lnk}' onclick='${gLQ}'>&rsaquo; ${list[i]}</a>`;
+    }
+    if(get_path().split("/").length == 4) {
+	html += `<a href='./info.html#${get_path()}'>&rsaquo; INFO.HTML</a>`;
     }
 
     document.getElementById(target_ID).innerHTML = html;

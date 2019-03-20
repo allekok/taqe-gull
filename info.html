@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ckb">
+    <head>
+	<script>
+	 if ('serviceWorker' in navigator) {
+	     navigator.serviceWorker.register('./sw.js', {scope: './'});
+	 }
+	</script>
+
+	<title>
+	    چەپکەگوڵ
+	</title>
+	<meta charset="utf-8" >
+	<link rel="apple-touch-icon" href="site/image/portraits/1.jpg">
+	<link rel="stylesheet" href="site/style.css" >
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	 main img {
+	     display:block;
+	     max-width:100%;
+	     height:auto;
+	     margin:auto;
+	 }
+	 main p {
+	     text-align:right;
+	     line-height:2;
+	     padding:1em;
+	     background:rgba(255,255,255,.85);
+	     color:#000;
+	 }
+	</style>
+    </head>
+    <body>
+	<center>
+	    <header>
+		<h1 onclick="window.location='./#.'">
+		    چەپکەگووڵ
+		</h1>
+		<small>
+		    ئاوێنەی  
+		    <a href="http://kurdflora.com/">kurdflora.com</a>
+		</small>
+            </header>
+
+            <main id='main'>
+
+            </main>
+
+	    <footer>
+		<a href="https://github.com/allekok/chepke-gull">
+		    github
+		</a>
+	    </footer>
+	</center>
+	<script>
+	 window.onload = function () {
+	     get_list(get_path(), "main");
+	 }
+	 
+	 function get_list(path, target_ID) {
+	     var client = new XMLHttpRequest();
+	     client.open("get", `${path}/list.txt?preventCache=${Date.now()}`);
+	     document.getElementById(target_ID).innerHTML = "<div class='loader'></div>";
+
+	     client.onload = function() {
+		 echo_list(this.responseText, target_ID);
+	     }
+	     client.send();
+	 }
+
+	 function get_path() {
+	     var h = window.location.hash.substr(1);
+	     if (h === "") return ".";
+	     return h;
+	 }
+
+	 function echo_list(list, target_ID) {
+	     list = list.split("\n");
+	     var target = document.getElementById(target_ID);
+	     target.innerHTML = "";
+	     for(var i in list) {
+		 if(list[i].substr(-4) == ".JPG") {
+		     target.innerHTML += `<img src='${get_path()}/${list[i]}'>`;
+		 }
+		 else if(list[i] == "INFO.TXT") {
+		     var client=new XMLHttpRequest();
+		     client.open("get", get_path()+"/"+list[i]);
+		     client.onload = function() {
+			 target.innerHTML = `<p>${this.responseText.replace(/\n/g,"<br>")}</p>` + target.innerHTML;
+		     }
+		     client.send();
+		 }
+	     }
+	 }
+
+	</script>
+    </body>
+</html>

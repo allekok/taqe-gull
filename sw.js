@@ -1,4 +1,4 @@
-const version = "v3";
+const version = "v4";
 self.addEventListener('install', function(event) {
     event.waitUntil(
 	caches.open(version).then(function(cache) {

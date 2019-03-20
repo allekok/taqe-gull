@@ -2,7 +2,7 @@
 
 function make_list ($path = ".") {
 
-    $not = [".", "..", "list.txt", "list.php", "image", "index.html", ".git", "LICENSE", "README.md", "sw.js", "tools", ".gitignore", "site"];
+    $not = [".", "..", "list.txt", "list.php", "image", "index.html", ".git", "LICENSE", "README.md", "sw.js", "tools", ".gitignore", "site", "info.html"];
     $dir = opendir($path);
     $files = [];
     
