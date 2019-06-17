@@ -1,36 +1,31 @@
 <?php
-
-function make_list ($path = ".") {
-
-    $not = [".", "..", "list.txt", "list.php", "image", "index.html", ".git", "LICENSE", "README.md", "sw.js", "tools", ".gitignore", "site", "info.html"];
+/* Function */
+function make_list ($path = ".")
+{
+    $not = [".", "..", "list.txt", "list.php", "image",
+	    "index.html", ".git", "LICENSE", "README.md",
+	    "sw.js", "tools", ".gitignore", "site", "info.html"];
     $dir = opendir($path);
     $files = [];
     
-    while (false !== ($e = readdir($dir))) {
-
-        if (! in_array($e, $not) ) {
-
-            if( is_dir("$path/$e") ) {
-
+    while (false !== ($e = readdir($dir)))
+    {
+        if (! in_array($e, $not) )
+	{
+            if( is_dir("$path/$e") )
+	    {
                 make_list ("$path/$e");
             }
-
             $files[] = $e;
         }
     }
-
+    closedir($dir);
+    
     sort($files);
     $list = implode("\n", $files);
-
-    $f = fopen("$path/list.txt", "w");
-    fwrite($f, $list);
-    fclose($f);
-
-    return true;
+    file_put_contents("$path/list.txt", $list);
 }
 
-// run
-
-echo make_list() . "\n";
-
+/* Run */
+make_list();
 ?>
