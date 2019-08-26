@@ -26,6 +26,10 @@ function get_path()
 
 function echo_list(list, target_ID)
 {
+    const t = document.getElementById(target_ID);
+    t.style.animation = '';
+    void t.offsetHeight;
+    
     list = list.split("\n");
     let html = "",
 	path = get_path(),
@@ -47,7 +51,8 @@ onclick='event.preventDefault();get_list("${back}", "main");'>گەڕانەوە &
         html += `<a href='${href}' onclick='${onClick}'>&rsaquo; ${list[i]}</a>`;
     }
 
-    document.getElementById(target_ID).innerHTML = html;
+    t.style.animation = 'fade .3s';
+    t.innerHTML = html;
 }
 
 function filter(needle)
