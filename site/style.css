@@ -17,7 +17,7 @@ input {
 }
 
 body {
-    background: linear-gradient(to top, #996633 20%,#99ff33 0%, #99ff33 30%,#cc0000 0%,#cc0000 31%, #3399ff 0%);
+    background: #b0f;
     height:100%;
     margin: 1em;
     color:#fff;
@@ -34,6 +34,7 @@ header h1 {
     margin-bottom: 0;
     display: inline-block;
     font-weight: normal;
+    font-size:2.3em;
 }
 
 header small {
@@ -41,11 +42,13 @@ header small {
 }
 
 .loader {
-    animation: l .6s infinite linear;
-    border-top: 4px solid #000;
-    width: 4em;
-    height: 4em;
-    border-radius: 100%;
+    animation: l 1s infinite linear;
+    border-top: 5px solid #fff;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin:1em;
+    display:block;
 }
 
 @keyframes l {

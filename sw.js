@@ -3,12 +3,12 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
 	caches.open(version).then(function(cache) {
 	    return cache.addAll([
-		'./sw.js',
-		'./index.html',
-		'./site/script.js',
-		'./site/style.css',
-		'./site/image/portraits/1.jpg',
-		'./site/DroidNaskh-Regular.woff2',
+		'/chepke-gull/sw.js',
+		'/chepke-gull/index.html',
+		'/chepke-gull/site/script.js?v1',
+		'/chepke-gull/site/style.css?v1',
+		'/chepke-gull/site/image/portraits/1.jpg',
+		'/chepke-gull/site/DroidNaskh-Regular.woff2',
 	    ]);
 	})
     );
@@ -35,7 +35,7 @@ self.addEventListener('fetch', function(event) {
 		return response;
 	    });
 	}).catch(function() {
-	    return caches.match('./index.html');
+	    return caches.match('/chepke-gull/index.html');
 	})
     );
 });
