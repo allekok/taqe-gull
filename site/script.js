@@ -3,12 +3,12 @@ function get_list(path, target_ID)
     document.getElementById(target_ID).innerHTML = "<div class='loader'></div>";
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.open("get", `${path}/list.txt?preventCache=${Date.now()}`);
-    xmlhttp.onload = function()
+/*    xmlhttp.onload = function()
     {
         if(path != get_path())
 	    set_url(path);
         echo_list(this.responseText, target_ID);
-    }
+    }*/
     xmlhttp.send();
 }
 
