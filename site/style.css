@@ -43,7 +43,7 @@ header small {
 
 .loader {
     animation: l 1s infinite linear;
-    border: 5px solid rgba(255,255,255,.5);
+    border: 5px solid transparent;
     border-top-color: #0f9;
     border-bottom-color: #0f9;
     width: 3em;
@@ -128,7 +128,7 @@ main img {
 
 #search input {
     margin-top: 1em;
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     display: block;
     border: 0;

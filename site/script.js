@@ -2,7 +2,7 @@ function get_list(path, target_ID)
 {
     document.getElementById(target_ID).innerHTML = "<div class='loader'></div>";
     const xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("get", `${path}/list.txt?preventCache=${Date.now()}`);
+    xmlhttp.open("get", `${path}/list.txt`);
     xmlhttp.onload = function()
     {
         if(path != get_path())
