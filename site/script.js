@@ -14,7 +14,17 @@ function get_list(path, target_ID)
 
 function set_url(path)
 {
-    window.location = `#${path}`;
+    const url = `#${path}`;
+    window.history.pushState({url:url},'',url);
+}
+
+window.onpopstate = function ()
+{
+    const S = window.history.state;
+    if(S)
+    {
+	get_list(get_path(), "main");
+    }
 }
 
 function get_path()
