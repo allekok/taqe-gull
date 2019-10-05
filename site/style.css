@@ -44,8 +44,8 @@ header small {
 .loader {
     animation: l 1s infinite linear;
     border: 5px solid transparent;
-    border-top-color: #0f9;
-    border-bottom-color: #0f9;
+    border-top-color: #9f0;
+    border-bottom-color: #9f0;
     width: 3em;
     height: 3em;
     border-radius: 50%;
