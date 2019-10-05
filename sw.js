@@ -6,7 +6,7 @@ self.addEventListener('install', function(event) {
 		'/chepke-gull/sw.js',
 		'/chepke-gull/index.html',
 		'/chepke-gull/site/script.js?v6',
-		'/chepke-gull/site/style.css?v5',
+		'/chepke-gull/site/style.css?v6',
 		'/chepke-gull/site/image/portraits/1.jpg',
 		'/chepke-gull/site/DroidNaskh-Regular.woff2',
 	    ]);
