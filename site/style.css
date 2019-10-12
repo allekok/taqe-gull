@@ -17,7 +17,7 @@ input {
 }
 
 body {
-    background: #9f0;
+    background:rgba(0,0,0,.1);
     height:100%;
     margin: 1em;
     color:#000;
@@ -44,8 +44,7 @@ header small {
 .loader {
     animation: l 1s infinite linear;
     border: 5px solid transparent;
-    border-top-color: #9f0;
-    border-bottom-color: #9f0;
+    border-top-color: #000;
     width: 3em;
     height: 3em;
     border-radius: 50%;
@@ -150,4 +149,41 @@ main img {
     margin:0 0 1em 0;
     display:block;
     border-bottom:2px solid rgba(255,255,255,.25);
+}
+.cover
+{
+    background:rgba(255,255,255,.5);
+    position:fixed;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    z-index:-998;
+}
+.flower
+{
+    width:20em;
+    height:20em;
+    border-radius:50%;
+    position:fixed;
+    z-index:-999;
+}
+#flower-red
+{
+    left:0;
+    bottom:0;
+    transform:rotate(+30deg);
+    animation:fade-flower-red 1s ease forwards;
+}
+@keyframes fade-flower-red
+{
+    from {
+	background: none;
+	box-shadow: none;
+    }
+    to {
+	background: rgba(200,0,0,.6);
+	box-shadow: -15em 0 0 #f00,
+		    0 -15em 0 rgba(255,0,0,.7),
+		    15em 0 0 #f00, 0 15em 0 rgba(255,0,0,.7);
+    }
 }
