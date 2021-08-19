@@ -98,8 +98,10 @@ function kurdish_numbers(inp) {
 	const en = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
 	      ck = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'],
 	      fa = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']
-	for(const i in en)
-		inp = inp.replace(en[i], ck[i]).replace(fa[i], ck[i])
+	for(const i in en) {
+		inp = inp.replace(new RegExp(en[i], 'g'), ck[i]).
+			replace(new RegExp(fa[i], 'g'), ck[i])
+	}
 	return inp
 }
 function san_data(inp='', last_chance=false) {

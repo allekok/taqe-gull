@@ -4,7 +4,7 @@ self.addEventListener('install', event => {
 	event.waitUntil(
 		caches.open(ver).then(cache => {
 			return cache.addAll([
-				root + 'site/script.js?v7',
+				root + 'site/script.js?v8',
 				root + 'site/style.css?v10',
 				root + 'site/image/portraits/1.jpg',
 				root + 'site/DroidNaskh-Regular.woff2',
