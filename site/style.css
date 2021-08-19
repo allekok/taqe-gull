@@ -41,7 +41,7 @@ header small {
 	width: 3em;
 	height: 3em;
 	border-radius: 50%;
-	margin:1em;
+	margin:1em auto;
 	display:block;
 }
 @keyframes l {
@@ -56,8 +56,9 @@ a {
 	color: #000;
 }
 nav {
-	margin-top:1em;
+	margin:1em auto 0;
 	text-align:left;
+	max-width:1000px;
 }
 nav button {
 	background:rgba(255,255,255,.5);
@@ -67,6 +68,7 @@ nav button {
 	font-size:1.1em;
 	padding:.5em 1em;
 	border-radius:1em;
+	cursor:pointer;
 }
 nav button:hover {
 	background:rgba(255,255,255,.7);
@@ -74,7 +76,7 @@ nav button:hover {
 #main {
 	border-radius:1em;
 	max-width: 1000px;
-	margin: 1em 0;
+	margin: 1em auto;
 	background: rgba(255, 255, 255, .35);
 }
 main p {
@@ -105,7 +107,7 @@ main img {
 	background: rgba(255, 255, 255, .2);
 }
 #search input {
-	margin-top: 1em;
+	margin:1em auto 0;
 	max-width: 1000px;
 	width: 100%;
 	display: block;
