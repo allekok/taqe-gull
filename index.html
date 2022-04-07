@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ckb">
 	<head>
-		<script>
-		 if('serviceWorker' in navigator) {
-			 navigator.serviceWorker.register(
-				 '/taqe-gull/sw.js',
-				 {scope: '/taqe-gull/'})
-		 }
-		</script>
 		<title>
 			تاقەگوڵ
 		</title>
+
+		<!-- Metadata information -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
-		<meta property="og:image"
-		      content="site/image/portraits/1.png">
+
+		<!-- Logo -->
 		<link rel="shortcut icon" href="site/image/portraits/1.png">
-		<link rel="apple-touch-icon"
-		      href="site/image/portraits/1.jpg">
+		<link rel="apple-touch-icon" href="site/image/portraits/1.jpg">
+		<meta content="src/frontend/style/images/1.png"
+		      itemprop="image">
+
+		<!-- Manifest -->
 		<link rel="manifest" href="site/site.webmanifest">
+
+		<!-- Stylesheet -->
 		<link rel="stylesheet" href="site/style.css?v10">
+
+		<!-- Service worker -->
+		<script>
+		 if('serviceWorker' in navigator)
+			 navigator.serviceWorker.register(
+				 '/taqe-gull/sw.js', {scope: '/taqe-gull/'})
+		</script>
 	</head>
 	<body>
 		<div class="cover"></div>
 		<div class="flower" id="flower-red"></div>
-		
+
 		<header>
 			<h1 onclick="get_list('.', 'main')">
 				تاقەگوڵ
 			</h1>
 			<small>
-				ئاوێنەی  
+				ئاوێنەی
 				<a href="http://kurdflora.com/">
 					kurdflora.com
 				</a>
 			</small>
 		</header>
-		
+
 		<section id="search">
 			<input type="text"
 			       onkeyup="filter(this.value)"
 			       placeholder="گەڕان لەم لاپەڕەدا...">
 		</section>
-		
+
 		<main id="main"></main>
-		
+
 		<footer>
 			<a href="https://github.com/allekok/taqe-gull">
 				کۆد
 			</a>
 		</footer>
-		
+
 		<script src="site/script.js?v8" defer></script>
 		<script>
 		 window.onload = () => get_list(get_path(), "main")

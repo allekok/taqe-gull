@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ckb">
 	<head>
-		<script>
-		 if('serviceWorker' in navigator) {
-			 navigator.serviceWorker.register(
-				 '/taqe-gull/sw.js',
-				 {scope: '/taqe-gull/'})
-		 }
-		</script>
 		<title>
 			تاقەگوڵ
 		</title>
+
+		<!-- Metadata information -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
-		<link rel="apple-touch-icon"
-		      href="site/image/portraits/1.jpg">
+
+		<!-- Logo -->
+		<link rel="shortcut icon" href="site/image/portraits/1.png">
+		<link rel="apple-touch-icon" href="site/image/portraits/1.jpg">
+		<meta content="src/frontend/style/images/1.png"
+		      itemprop="image">
+
+		<!-- Manifest -->
+		<link rel="manifest" href="site/site.webmanifest">
+
+		<!-- Stylesheet -->
 		<link rel="stylesheet" href="site/style.css?v10">
+
+		<!-- Service worker -->
+		<script>
+		 if('serviceWorker' in navigator)
+			 navigator.serviceWorker.register(
+				 '/taqe-gull/sw.js', {scope: '/taqe-gull/'})
+		</script>
 	</head>
 	<body>
 		<div class="cover"></div>
 		<div class="flower" id="flower-red"></div>
-		
+
 		<header>
 			<h1 onclick="window.location = './#.'">
 				تاقەگوڵ
 			</h1>
 			<small>
-				ئاوێنەی  
+				ئاوێنەی
 				<a href="http://kurdflora.com/">
 					kurdflora.com
 				</a>
@@ -34,12 +45,11 @@
 		</header>
 
 		<nav>
-			<button type="button"
-				      onclick="history.back()">
+			<button type="button" onclick="history.back()">
 				گەڕانەوە &rsaquo;
 			</button>
 		</nav>
-		
+
 		<main id="main"></main>
 
 		<footer>
@@ -47,7 +57,7 @@
 				کۆد
 			</a>
 		</footer>
-		
+
 		<script>
 		 window.onload = () => get_list(get_path(), "main")
 
