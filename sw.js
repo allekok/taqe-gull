@@ -1,4 +1,4 @@
-const ver = 'v5'
+const ver = 'v6'
 const root = '/taqe-gull/'
 self.addEventListener('install', event => {
 	event.waitUntil(
