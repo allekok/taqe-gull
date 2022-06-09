@@ -96,6 +96,7 @@ main img {
 	border-radius:1em;
 }
 #main a {
+	border-radius:1em;
 	display: block;
 	text-align: right;
 	font-size: 1.1em;
@@ -170,5 +171,17 @@ main img {
 			10em -11.66em 0 rgba(255,0,155,.4),
 			0 15em 0 rgba(155,0,255,.4),
 			-10em 11.66em 0 rgba(0,255,155,.4);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background:#AAA;
+	}
+	#main {
+		background:rgba(255, 255, 255, .2);
+	}
+	main p {
+		background:rgba(255, 255, 255, .2);
 	}
 }
